@@ -1,10 +1,10 @@
 const shortid = require('shortid')
 
 const createGiftCardRequest = (request) => {
-    const {partnerId, amount, currencyCode} = request
+    const {partnerId, amount, currencyCode, creationRequestId} = request
 
     return {
-        creationRequestId: `${partnerId}${shortid.generate()}`,
+        creationRequestId,
         partnerId,
         value: {
             amount,
