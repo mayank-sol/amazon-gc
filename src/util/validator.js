@@ -1,6 +1,7 @@
 const Joi = require('joi');
 
 const schema = {
+    creationRequestId: Joi.string().required(),
     amount: Joi.number().min(1).required(),
     currencyCode: Joi.string().required(),
     partnerId: Joi.string().required(),
